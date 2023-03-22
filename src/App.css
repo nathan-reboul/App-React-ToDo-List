@@ -1,0 +1,230 @@
+/* Importations d'une font de Google font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* Styles généraux */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  background-color: #fff;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Styles du header */
+.header {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 2rem;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Styles de la liste de tâches */
+.task-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: move;
+}
+
+.task.checked {
+  background-color: #ddd;
+}
+
+.task .task-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.task .task-buttons {
+  margin-left: auto;
+}
+
+.task .check-button {
+  padding: 5px;
+  margin-right: 10px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task .check-button.checked {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.task .delete-button {
+  padding: 5px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styles du bouton "Ajouter" */
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  margin: 10px auto 0;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Styles de la pop-up d'ajout de tâche */
+.add-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.add-modal.show {
+  display: flex;
+  align-items: center;
+}
+
+.add-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-form label {
+  margin-bottom: 5px;
+}
+
+.add-form input {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styles du bouton de validation */
+.check-button {
+  padding: 5px;
+  margin-right: 10px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.check-button.checked {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Styles de la date de la tâche*/
+.task-dueDate {
+  margin-left: 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Styles si la date est dépassée*/
+.task-overdue {
+  color: red;
+  font-weight: bold;
+}
+
+/* Styles du bouton recherche*/
+.search-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50% 50%;
+  cursor: pointer;
+  background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	padding:17px 22px;
+}
+
+.search-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.search-modal.show {
+  display: flex;
+}
+
+.search-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
